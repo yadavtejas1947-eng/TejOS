@@ -5,27 +5,35 @@
         <link rel="stylesheet" href="style.css">
         
         
+        
     </head>
     
     <body>
         
         <div class="window">
             
-            <div class="welcome">
+            <div id="welcome">
 
-                <img src = "https://i.pinimg.com/originals/1b/f5/d6/1bf5d6b51124b73219b6b934b3b83853.jpg" class="tony" >
-                <h1>Hello and Welcome to TejOS</h1>
-                <p>This is the my first good level HTML project , so enjoy...</p>
-
-
+                <div id="welcomeheader">
+                    <div class="OCM-button">
+                        <button id="welcomeClose">X</button>
+                        <button id="welcomeResize">O</button>
+                        <button id="welcomeMinimize">-</button>
+                    </div>
+                </div>
                 
-
-            </div>
+                <div class="main-body">
+                    <img src = "https://i.pinimg.com/originals/1b/f5/d6/1bf5d6b51124b73219b6b934b3b83853.jpg" class="tony" >
+                    <h1>Hello and Welcome to TejOS</h1>
+                    <p>This is the my first good level HTML project , so enjoy...</p>
+                </div>
             
+            </div>
+
             <div class = "bottombar">
                 
                 <div class="os_name">
-                    <p style="margin-left: 15px;">TejOS</p>
+                    <button style="margin-left: 15px;" id="start-btn">TejOS</button>
                 </div>
                 
                 <div class="datetime">
@@ -39,7 +47,6 @@
             
         </div>
         
-    
-    <script src="script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

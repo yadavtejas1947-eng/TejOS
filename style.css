@@ -73,10 +73,24 @@ body {
 
 }
 
-#welcomeheader{
+.welcomeheader{
     border: solid;
     border-radius: 5px;
     top: 100px;
     left: 100px;
-    background-color: rgb(183, 177, 177);
+    background-color: rgb(104, 103, 103);
 }
+
+.desktop-apps{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-left: 4px;
+}
+
+#notepad-img{
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+}
+

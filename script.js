@@ -15,6 +15,7 @@ setInterval(updateClock,1000); //Updates Clock every second
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("notes"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -70,6 +71,7 @@ function dragElement(element) {
 
 //Identifying Our Window
 var welcomeScreen = document.querySelector("#welcome")
+var notesScreen = document.querySelector("#notes")
 
 //Window Function
 function closeWindow(element){
@@ -78,11 +80,12 @@ function closeWindow(element){
 
 function openWindow(element){
     element.style.visibility = "visible"
-    
+
 }
 
 //Identifying the buttons
 var welcomeScreenClose = document.getElementById("welcomeClose")
+var NotesScreenClose = document.getElementById("notesClose")
 var welcomeScreenResize = document.getElementById("welcomeResize")
 var welcomeScreenMinimize = document.getElementById("welcomeMinimize")
 var welcomeScreenOpen = document.getElementById("start-btn")
@@ -98,6 +101,30 @@ welcomeScreenOpen.addEventListener("click" , function() {
     openWindow(welcomeScreen);
 });
 
+NotesScreenClose.addEventListener("click", () => closeWindow(welcomeScreen));
+//State of the Selected Icon
 
+var selectedIcon = undefined
+function selectedIcon(element){
+  element.classList.add('selected');
+  selectedIcon = element
+}
+
+function deselecteIcon(element){
+  element.classList.remove('selected')
+  selectedIcon = undefined
+}
+
+//Handeling Icon Tap
+
+function handleIconTap(element){
+  if (element.classList.contains("selected")){
+    deselecteIcon(element)
+    openWindow(window)
+  
+  }else{
+    selectedIcon(element)
+  }
+}
 
 
